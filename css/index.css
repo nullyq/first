@@ -1,0 +1,165 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.one{
+    background-color: skyblue;
+
+    text-align: center;
+}
+.one>div{
+    display: flex;
+    flex-direction: column;
+}
+.one .logo{
+    height: 186px;
+    margin-top: 100px;
+}
+.one .text{
+    margin-top: 20px;
+}
+.one .text img{
+    margin:0 30px;
+    opacity: 0;
+}
+.one.animating .text img{
+    margin: 0;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.one .info{
+    margin: 50px;
+}
+
+
+
+.two{
+    background-color: yellowgreen;
+}
+.two>div{
+    display: flex;
+    padding-top: 100px;
+
+}
+.two .shield{
+    flex: 2;
+
+}
+.two .shield img:nth-child(3){
+    transform: translate(300px,300px) rotate(3500deg);
+    transition: all 1s;
+}
+.two.animating .shield img:nth-child(3){
+    transform: translate(0,0) rotate(0deg);
+
+}
+.two .info{
+    flex: 3;
+}
+.three{
+    background-color: hotpink;
+}
+.three>div{
+    display: flex;
+    position: relative;
+}
+.three .info{
+    flex: 1;
+    padding-top: 150px;
+}
+.three .circle{
+    flex: 1;
+    padding-top: 50px;
+    align-self: center;
+}
+.three .rocket{
+    height: 204px;
+    width: 203px;
+    background: url("../images/rocket.png") no-repeat center;
+    position: absolute;
+    bottom: 0px;
+    left: -203px;
+}
+.three.animating .rocket{
+    bottom: 200px;
+    left: 700px;
+    transition: all 1s;
+}
+.four{
+    background-color: olivedrab;
+}
+.four>div{
+    display: flex;
+}
+.four .searchBar{
+    flex: 1;
+    position: relative;
+    margin-top: 100px;
+    transform: translate(-900px,0);
+    transition: all 1s;
+}
+.four .searchBar .key{
+    background: url("../images/key.png");
+    height: 22px;
+    position: absolute;
+    top: 22px;
+    left: 15px;
+    width:0px;
+}
+.four .searchBar .search{
+    background: url("../images/search.png");
+    height: 66px;
+    width: 529px;
+}
+.four .searchBar .result{
+    background: url("../images/result.png");
+    width: 529px;
+    height: 0px;
+}
+/*Ò³Ãæ4¶¯»­*/
+.four.animating .searchBar .key{
+    width: 99px;
+    transition: all 2.5s 1.5s steps(5,start);
+}
+.four.animating .searchBar{
+    transform: translate(0px,0px);
+}
+.four.animating .searchBar .result{
+    height: 372px;
+    transition: all 1s 4s;
+}
+.four .info{
+    flex: 1;
+}
+.five{
+    background-color: orange;
+    position: relative;
+}
+.five>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.five .brower{
+    position: relative;
+}
+.five .brower .toolbar{
+    background: url("../images/toolbar.png");
+    height: 79px;
+    width: 1004px;
+}
+.five .brower .extra{
+    background: url("../images/extra.png");
+    height: 29px;
+    width: 394px;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}
+.five .line{
+    position: absolute;
+    background-color: white;
+
+}
